@@ -21,7 +21,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, Project.MOD_ID);
 
     public static final RegistryObject<Block> XENOTIME_ORE = registerBlock("xenotime_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(15f).
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(25f).
                     requiresCorrectToolForDrops()
                     ), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
