@@ -3,6 +3,8 @@ package net.aqueox.project;
 import com.mojang.logging.LogUtils;
 import net.aqueox.project.block.ModBlocks;
 import net.aqueox.project.item.ModItems;
+import net.aqueox.project.world.feature.ModConfiguredFeatures;
+import net.aqueox.project.world.feature.ModPlacedFeatures;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -28,6 +30,8 @@ public class Project
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
