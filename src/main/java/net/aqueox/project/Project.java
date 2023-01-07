@@ -2,9 +2,12 @@ package net.aqueox.project;
 
 import com.mojang.logging.LogUtils;
 import net.aqueox.project.block.ModBlocks;
+import net.aqueox.project.entity.ModEntityTypes;
+import net.aqueox.project.entity.client.ChomperRenderer;
 import net.aqueox.project.item.ModItems;
 import net.aqueox.project.world.feature.ModConfiguredFeatures;
 import net.aqueox.project.world.feature.ModPlacedFeatures;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -13,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Project.MOD_ID)
@@ -32,8 +36,10 @@ public class Project
         ModBlocks.register(modEventBus);
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
+        ModEntityTypes.register((modEventBus));
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+        GeckoLib.initialize();
 
 
 
@@ -53,6 +59,7 @@ public class Project
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            EntityRenderers.register(ModEntityTypes.CHOMPER.get(), ChomperRenderer::new);
 
         }
     }
