@@ -2,6 +2,7 @@ package net.aqueox.project.entity;
 
 import net.aqueox.project.Project;
 import net.aqueox.project.entity.custom.ChomperEntity;
+import net.aqueox.project.entity.custom.NoxEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -20,6 +21,11 @@ public class ModEntityTypes {
                     () -> EntityType.Builder.of(ChomperEntity::new, MobCategory.MONSTER)
                             .sized(0.4f,1.5f)
                             .build(new ResourceLocation(Project.MOD_ID,"chomper").toString()));
+
+    public static final RegistryObject<EntityType<NoxEntity>> NOX = ENTITY_TYPES.register("nox",
+            () -> EntityType.Builder.of(NoxEntity::new, MobCategory.CREATURE)
+                    .sized(0.8f, 0.8f)
+                    .build(new ResourceLocation(Project.MOD_ID, "nox").toString()));
 
 
     public static void register(IEventBus eventbus){

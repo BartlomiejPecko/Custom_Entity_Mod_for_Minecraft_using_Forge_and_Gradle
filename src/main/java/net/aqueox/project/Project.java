@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.aqueox.project.block.ModBlocks;
 import net.aqueox.project.entity.ModEntityTypes;
 import net.aqueox.project.entity.client.ChomperRenderer;
+import net.aqueox.project.entity.client.NoxRenderer;
 import net.aqueox.project.item.ModItems;
 import net.aqueox.project.world.feature.ModConfiguredFeatures;
 import net.aqueox.project.world.feature.ModPlacedFeatures;
@@ -43,6 +44,8 @@ public class Project
 
 
 
+
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -60,6 +63,7 @@ public class Project
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             EntityRenderers.register(ModEntityTypes.CHOMPER.get(), ChomperRenderer::new);
+            EntityRenderers.register(ModEntityTypes.NOX.get(), NoxRenderer::new);
 
         }
     }
