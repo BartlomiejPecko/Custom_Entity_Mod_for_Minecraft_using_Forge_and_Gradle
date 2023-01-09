@@ -3,7 +3,6 @@ package net.aqueox.project;
 import com.mojang.logging.LogUtils;
 import net.aqueox.project.block.ModBlocks;
 import net.aqueox.project.entity.ModEntityTypes;
-import net.aqueox.project.entity.client.ChomperRenderer;
 import net.aqueox.project.entity.client.NoxRenderer;
 import net.aqueox.project.item.ModItems;
 import net.aqueox.project.world.feature.ModConfiguredFeatures;
@@ -62,9 +61,7 @@ public class Project
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            EntityRenderers.register(ModEntityTypes.CHOMPER.get(), ChomperRenderer::new);
             EntityRenderers.register(ModEntityTypes.NOX.get(), NoxRenderer::new);
-
         }
     }
 }
