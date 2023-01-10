@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "I": {
+      "item": "minecraft:blaze_rod"
+    },
+    "i": {
+      "item": "project:xenotime"
+    }
+  },
+  "pattern": [
+    "III",
+    "IiI",
+    "III"
+  ],
+  "result": {
+    "item": "project:nox_spawn_egg"
+  }
+}

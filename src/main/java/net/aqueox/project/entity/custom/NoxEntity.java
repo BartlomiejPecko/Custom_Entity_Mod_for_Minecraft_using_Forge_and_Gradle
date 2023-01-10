@@ -210,13 +210,13 @@ public class NoxEntity extends TamableAnimal implements IAnimatable {
     public void setTame(boolean tamed) {
         super.setTame(tamed);
         if (tamed) {
-            getAttribute(Attributes.MAX_HEALTH).setBaseValue(80.0D);
-            getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(5D);
-            getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double) 0.6f);
+            getAttribute(Attributes.MAX_HEALTH).setBaseValue(125.0D);
+            getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(6D);
+            getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double) 0.55f);
         } else {
             getAttribute(Attributes.MAX_HEALTH).setBaseValue(30.0D);
-            getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(2D);
-            getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double) 0.45f);
+            getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(3D);
+            getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double) 0.42f);
         }
     }
 

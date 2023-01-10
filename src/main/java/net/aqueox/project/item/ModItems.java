@@ -20,7 +20,7 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> NOX_SPAWN_EGG = ITEMS.register("nox_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityTypes.NOX, 0x22b341, 0x19732e,
+            () -> new ForgeSpawnEggItem(ModEntityTypes.NOX,  0xADD8E6, 0x00008B,
                     new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static void register(IEventBus eventBus) {
