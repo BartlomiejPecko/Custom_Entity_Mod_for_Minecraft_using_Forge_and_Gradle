@@ -7,5 +7,5 @@ mined from xenotime ore, only using diamond pickaxe.
 Block: xenotime ore
 found below y=8, very rare.
 
-Entity: nox
-After taming with snowball behaves similar to wolves. crafted using xenotime in the middle and blaze rods all around it.
+Entity: nox entity
+after taming with snowball behaves similar to wolves. crafted using xenotime in the middle and blaze rods all around it.
