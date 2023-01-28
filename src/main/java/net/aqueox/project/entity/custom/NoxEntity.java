@@ -57,7 +57,7 @@ public class NoxEntity extends TamableAnimal implements IAnimatable {
 
     public static AttributeSupplier setAttributes(){
         return TamableAnimal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 20.0D)
+                .add(Attributes.MAX_HEALTH, 180.0D)
                 .add(Attributes.ATTACK_DAMAGE, 5.0f)
                 .add(Attributes.ATTACK_SPEED, 1.0f)
                 .add(Attributes.MOVEMENT_SPEED, 0.3f).build();}
@@ -69,7 +69,7 @@ public class NoxEntity extends TamableAnimal implements IAnimatable {
         }
 
         if (this.isSitting()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.nox.sit", ILoopType.EDefaultLoopTypes.LOOP));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.nox.sit", ILoopType.EDefaultLoopTypes.PLAY_ONCE));
             return PlayState.CONTINUE;
         }
         event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.nox.idle", ILoopType.EDefaultLoopTypes.LOOP));
@@ -110,6 +110,9 @@ public class NoxEntity extends TamableAnimal implements IAnimatable {
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, AbstractVillager.class, false));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, IronGolem.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Creeper.class, true));
+    }
+    public boolean causeFallDamage(float p_149683_, float p_149684_, DamageSource p_149685_) {
+        return false;
     }
 
     protected SoundEvent getAmbientSound() {
@@ -210,11 +213,11 @@ public class NoxEntity extends TamableAnimal implements IAnimatable {
     public void setTame(boolean tamed) {
         super.setTame(tamed);
         if (tamed) {
-            getAttribute(Attributes.MAX_HEALTH).setBaseValue(125.0D);
+            getAttribute(Attributes.MAX_HEALTH).setBaseValue(195.0D);
             getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(6D);
             getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double) 0.55f);
         } else {
-            getAttribute(Attributes.MAX_HEALTH).setBaseValue(30.0D);
+            getAttribute(Attributes.MAX_HEALTH).setBaseValue(130.0D);
             getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(3D);
             getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double) 0.42f);
         }

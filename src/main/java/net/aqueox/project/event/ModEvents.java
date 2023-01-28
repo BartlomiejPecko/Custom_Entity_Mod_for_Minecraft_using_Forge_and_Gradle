@@ -12,13 +12,6 @@ public class ModEvents {
     public static class ForgeEvents {
 
 
-
-
-
-
-
-
-
     }
     @Mod.EventBusSubscriber(modid=Project.MOD_ID, bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class ModEventBusEvents {
