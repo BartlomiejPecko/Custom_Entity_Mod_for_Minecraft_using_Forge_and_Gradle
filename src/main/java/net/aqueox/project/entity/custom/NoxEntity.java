@@ -116,15 +116,15 @@ public class NoxEntity extends TamableAnimal implements IAnimatable {
     }
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.BLAZE_AMBIENT;
+        return SoundEvents.SILVERFISH_AMBIENT;
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.BLAZE_HURT;
+        return SoundEvents.SILVERFISH_HURT;
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.BLAZE_DEATH;
+        return SoundEvents.SILVERFISH_DEATH;
     }
 
     protected float getSoundVolume() {
