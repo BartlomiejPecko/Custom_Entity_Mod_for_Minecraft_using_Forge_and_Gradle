@@ -4,8 +4,8 @@ This mod adds custom entity along with associated blocks and items. The custom e
 Item: xenotime
 mined from xenotime ore, only using diamond pickaxe.
 
-Block: xenotime ore
+Block: xenotime ore,
 found below y=8, very rare.
 
-Entity: nox entity
+Entity: Nox entity,
 after taming with snowball behaves similar to wolves. crafted using xenotime in the middle and blaze rods all around it.
