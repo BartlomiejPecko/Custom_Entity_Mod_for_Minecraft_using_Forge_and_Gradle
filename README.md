@@ -9,3 +9,17 @@ found below y=8, very rare.
 
 Entity: Nox entity,
 after taming with snowball behaves similar to wolves. crafted using xenotime in the middle and blaze rods all around it.
+
+
+![image](https://user-images.githubusercontent.com/113991373/230494772-53f36939-1736-49b7-a00a-ad9269dfea37.png)
+
+![image](https://user-images.githubusercontent.com/113991373/230494836-1b381110-e936-4d27-a737-170a962eae48.png)
+
+
+![image](https://user-images.githubusercontent.com/113991373/230494884-610b104e-71a8-4a64-a285-acd847d1d6f2.png)
+
+![image](https://user-images.githubusercontent.com/113991373/230494920-7b659a45-9c69-4ac7-b3ca-849af5d71ec9.png)
+
+
+
+
